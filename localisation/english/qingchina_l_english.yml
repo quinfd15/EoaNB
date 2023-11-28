@@ -72,17 +72,23 @@
     QNG_cave_in_to_the_west: "Cave In To The West"
     QNG_cave_in_to_the_west_desc: ""
 
-    QNG_chonghou_training_guideline: "Chonghou Training Guideline"
-    QNG_chonghou_training_guideline_desc: ""
-
     QNG_reshuffle_the_armies: "Reshuffle The Armies"
     QNG_reshuffle_the_armies_desc: ""
 
     QNG_purchase_foreign_weapons: "Purchase Foreign Weapons"
     QNG_purchase_foreign_weapons_desc: ""
 
-    QNG_disband_the_xiang_armies: "disband The Xiang Armies"
+    QNG_focus_disband_the_ever_victorious_army: "Disband the Ever Victorious Army"
+    QNG_focus_disband_the_ever_victorious_army_desc: ""
+
+    QNG_disband_the_xiang_armies: "Disband The Xiang Armies"
     QNG_disband_the_xiang_armies_desc: ""
+
+    QNG_focus_chu_army: "Chu Army"
+    QNG_focus_chu_army_desc: ""
+
+    QNG_focus_reform_the_eight_banners: "Reform the Eight Banners"
+    QNG_focus_reform_the_eight_banners_desc: ""
 
     QNG_yong_ying_system: "Yong Ying System"
     QNG_yong_ying_system_desc: ""
@@ -93,11 +99,26 @@
     QNG_reduce_green_standard_forces: "Reduce The Green Standard Forces"
     QNG_reduce_green_standard_forces_desc: ""
 
+    QNG_focus_lien_chun_armies: "Lien-Chun Army"
+    QNG_focus_lien_chun_armies_desc: ""
+
+    QNG_focus_quality_over_quality: "Quality over Quality"
+    QNG_focus_quality_over_quality_desc: ""
+
+    QNG_focus_manchurian_army: "A Manchurian Army"
+    QNG_focus_manchurian_army_desc: ""
+
+    QNG_focus_army_budget_question: "Question on the Army's Budget"
+    QNG_focus_army_budget_question_desc: ""
+
+    QNG_focus_reorganize_manchurian_army: "Reorganize the Manchurian Army"
+    QNG_focus_reorganize_manchurian_army_desc: ""
+
+    QNG_focus_establish_new_army: "Establish the New Army"
+    QNG_focus_establish_new_army_desc: ""
+
     QNG_train_the_shenji_ying: "Train The Shenji Ying"
     QNG_train_the_shenji_ying_desc: ""
-
-    QNG_merge_li_armies: "Merge Li's Armies"
-    QNG_merge_li_armies_desc: ""
 
     QNG_expand_foreign_arms_purchase: "Expand Foreign Arms Purchase"
     QNG_expand_foreign_arms_purchase_desc: ""
@@ -234,8 +255,35 @@
     QNG_ningbo_arsenal: "Ningbo Arsenal"
     QNG_ningbo_arsenal_desc: ""
 
-    QNG_lanzhou_factory: "Lanzhou Factory"
-    QNG_lanzhou_factory_desc: ""
+    QNG_lanzhou_arsenal: "Lanzhou Arsenal"
+    QNG_lanzhou_arsenal_desc: ""
+
+    QNG_focus_kunming_machinery_bureau: "Kunming Machinery Bureau"
+    QNG_focus_kunming_machinery_bureau_desc: ""
+
+    QNG_focus_guangzhou_machinery_bureau: "Guangzhou Machinery Bureau"
+    QNG_focus_guangzhou_machinery_bureau_desc: ""
+
+    QNG_focus_jinan_machinery_bureau: "Jinan Machinery Bureau"
+    QNG_focus_jinan_machinery_bureau_desc: ""
+
+    QNG_focus_changsha_machinery_bureau: "Changsha Machinery Bureau"
+    QNG_focus_changsha_machinery_bureau_desc: ""
+
+    QNG_focus_liberalize_the_economy: "Liberalize the Economy"
+    QNG_focus_liberalize_the_economy_desc: ""
+
+    QNG_focus_taiyuan_arsenal: "Taiyuan Arsenal"
+    QNG_focus_taiyuan_arsenal_desc: ""
+
+    QNG_focus_chengdu_machinery_bureau: "Chengdu Machinery Bureau"
+    QNG_focus_chengdu_machinery_bureau_desc: ""
+
+    QNG_focus_local_silver_coinage_minting: "Local Silver-Coinage Minting"
+    QNG_focus_local_silver_coinage_minting_desc: ""
+
+    QNG_focus_kaifeng_machinery_bureau: "Kaifeng Machinery Bureau"
+    QNG_focus_kaifeng_machinery_bureau_desc: ""
 
     QNG_expand_the_jiangnan_arsenal: "Expand The Jiangnan Arsenal"
     QNG_expand_the_jiangnan_arsenal_desc: ""
@@ -267,6 +315,15 @@
     QNG_keelung_coal_mine: "Keelung Coal Mine"
     QNG_keelung_coal_mine_desc: ""
 
+    QNG_focus_subsidize_light_industry: "Subsidize the Light Industry"
+    QNG_focus_subsidize_light_industry_desc: ""
+
+    QNG_focus_kaiping_railway: "Kaiping Railway"
+    QNG_focus_kaiping_railway_desc: ""
+
+    QNG_focus_tianjin_yu_railway: "Tianjin-Yu Railway"
+    QNG_focus_tianjin_yu_railway_desc: ""
+
     QNG_hubei_textile_company: "Hubei Textile Company"
     QNG_hubei_textile_company_desc: ""
 
@@ -288,4 +345,86 @@
     QNG_ping_hsiang_coal_mines: "Ping Hsiang Coal Mines"
     QNG_ping_hsiang_coal_mines_desc: ""
 
+    QNG_focus_expansion_of_the_fuzhou_navy_shipyard: "Expansion of the Fuzhou Naval Shipyard"
+    QNG_focus_expansion_of_the_fuzhou_navy_shipyard_desc: ""
 
+    QNG_focus_zhejiang_machinery_bureau: "Zhejiang Machinery Bureau"
+    QNG_focus_zhejiang_machinery_bureau_desc: ""
+
+    QNG_focus_xian_machinery_bureau: "Xi'an Machinery Bureau"
+    QNG_focus_xian_machinery_bureau_desc: ""
+
+    QNG_focus_great_hsi_ku_arsenal: "Great Hsi-Ku Arsenal"
+    QNG_focus_great_hsi_ku_arsenal_desc: ""
+
+    QNG_focus_progress_towards_industrializing: "Progress Towards Industrializing"
+    QNG_focus_progress_towards_industrializing_desc: ""
+
+    QNG_focus_establish_naval_schools: "Establish more Naval Schools"
+    QNG_focus_establish_naval_schools_desc: ""
+
+    QNG_focus_question_on_navy_spendings: "Question on Navy Spendings"
+    QNG_focus_question_on_navy_spendings_desc: ""
+
+    QNG_focus_haijun_yamen: "Haijun Yamen"
+    QNG_focus_haijun_yamen_desc: ""
+
+    QNG_focus_prioritize_beiyang_fleet: "Prioritize Beiyang Fleet"
+    QNG_focus_prioritize_beiyang_fleet_desc: ""
+
+    QNG_focus_diplomacy_of_the_qing: "Diplomacy of the Qing"
+    QNG_focus_diplomacy_of_the_qing_desc: ""
+
+    QNG_focus_enforce_the_tributary_system: "Enforce the Tributary System"
+    QNG_focus_enforce_the_tributary_system_desc: ""
+
+    QNG_focus_imperial_chinese_mision_to_ryukyu: "Imperial Chinese Mision to Ryukyu"
+    QNG_focus_imperial_chinese_mision_to_ryukyu_desc: ""
+
+    QNG_focus_influence_the_ryukyu_islands: "Influence the Ryukyu Islands"
+    QNG_focus_influence_the_ryukyu_islands_desc: ""
+
+    QNG_focus_chinese_diplomatic_mission_to_spain: "Chinese Diplomatic Mission to Spain"
+    QNG_focus_chinese_diplomatic_mission_to_spain_desc: ""
+
+    QNG_focus_chinese_diplomatic_mission_to_us: "Chinese Diplomatic Mission to the United States"
+    QNG_focus_chinese_diplomatic_mission_to_us_desc: ""
+
+    QNG_focus_chinese_diplomatic_mission_to_uk: "Chinese Diplomatic Mission to Britain"
+    QNG_focus_chinese_diplomatic_mission_to_uk_desc: ""
+
+    QNG_focus_sino_british_burma_clause: "Sino-British Burma Clause"
+    QNG_focus_sino_british_burma_clause_desc: ""
+
+    QNG_focus_chinese_diplomatic_mission_to_japan: "Chinese Diplomatic Mission to Japan"
+    QNG_focus_chinese_diplomatic_mission_to_japan_desc: ""
+
+    QNG_focus_sino_japanese_tianjin_conference: "Sino-Japanese Tianjin Conference"
+    QNG_focus_sino_japanese_tianjin_conference_desc: ""
+
+    QNG_focus_chinese_diplomatic_mission_to_germany: "Chinese Diplomatic Mission to Germany"
+    QNG_focus_chinese_diplomatic_mission_to_germany_desc: ""
+
+    QNG_focus_chinese_diplomatic_mission_to_france: "Chinese Diplomatic Mission to France"
+    QNG_focus_chinese_diplomatic_mission_to_france_desc: ""
+
+    QNG_focus_ceasefire_with_france: "Ceasefire with France"
+    QNG_focus_ceasefire_with_france_desc: ""
+
+    QNG_focus_chinese_diplomatic_mission_to_russia: "Chinese Diplomatic Mission to Russia"
+    QNG_focus_chinese_diplomatic_mission_to_russia_desc: ""
+
+    QNG_focus_chinese_diplomatic_mission_to_austria_hungary: "Chinese Diplomatic Mission to Austria-Hungary"
+    QNG_focus_chinese_diplomatic_mission_to_austria_hungary_desc: ""
+
+    QNG_focus_repeal_burmese_titles_for_jiangxinpo: "Repeal Burmese Titles for Jiangxinpo"
+    QNG_focus_repeal_burmese_titles_for_jiangxinpo_desc: ""
+
+    QNG_focus_chinese_korean_treaty: "Chinese-Korean Treaty"
+    QNG_focus_chinese_korean_treaty_desc: ""
+
+    QNG_focus_chinese_concession_of_incheon: "Chinese Concession of Incheon"
+    QNG_focus_chinese_concession_of_incheon_desc: ""
+
+    QNG_focus_military_assistance_to_korea: "Military Assistance to Korea"
+    QNG_focus_military_assistance_to_korea_desc: ""

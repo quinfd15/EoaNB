@@ -7,7 +7,7 @@ focus_tree = {
 			tag = QNG
 		}
 	}
-	continuous_focus_position = { x = 500 y = 1000 }
+	continuous_focus_position = { x = 100 y = 1200 }
 
 	default = no
 
@@ -704,8 +704,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = QNG_focus_chonghou_training_guideline
-		icon = GFX_Focus_Army_Reformed
+		id = QNG_focus_reshuffle_the_armies
+		icon = GFX_Focus_Army_Reforms
 		relative_position_id = QNG_focus_advocate_western_army_reforms
 		x = 0
 		y = 1
@@ -720,29 +720,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = QNG_focus_advocate_western_army_reforms
-		}
-		completion_reward = {
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = QNG_focus_reshuffle_the_armies
-		icon = GFX_Focus_Army_Reforms
-		relative_position_id = QNG_focus_chonghou_training_guideline
-		x = -1
-		y = 1
-		cost = 70
-
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = QNG_focus_chonghou_training_guideline
 		}
 		completion_reward = {
 			if = {
@@ -793,7 +770,7 @@ focus_tree = {
 	focus = {
 		id = QNG_focus_purchase_foreign_weapons
 		icon = GFX_Focus_international_investments
-		relative_position_id = QNG_focus_chonghou_training_guideline
+		relative_position_id = QNG_focus_reshuffle_the_armies
 		x = 1
 		y = 1
 		cost = 70
@@ -806,7 +783,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_chonghou_training_guideline
+			focus = QNG_focus_reshuffle_the_armies
 		}
 		completion_reward = {
 			if = {
@@ -851,9 +828,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = QNG_focus_disband_the_xiang_armies
-		icon = GFX_focus_QNG_disband_xiang
-		relative_position_id = QNG_focus_reshuffle_the_armies
+		id = QNG_focus_disband_the_ever_victorious_army
+		icon = GFX_focus_QNG_disband_victorious
+		relative_position_id = QNG_focus_form_the_huai_army
 		x = -1
 		y = 1
 		cost = 70
@@ -866,18 +843,18 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_reshuffle_the_armies
+			focus = QNG_focus_form_the_huai_army
 		}
 		completion_reward = {
-			army_experience = 25
+
 		}
 	}
 
 	focus = {
-		id = QNG_focus_yong_ying_system
-		icon = GFX_Focus_Mandatory_Conscription
-		relative_position_id = QNG_focus_reshuffle_the_armies
-		x = 1
+		id = QNG_focus_disband_the_xiang_armies
+		icon = GFX_focus_QNG_disband_xiang
+		relative_position_id = QNG_focus_disband_the_ever_victorious_army
+		x = -1
 		y = 1
 		cost = 70
 
@@ -889,19 +866,16 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_reshuffle_the_armies
-		}
-		prerequisite = {
-			focus = QNG_focus_purchase_foreign_weapons
+			focus = QNG_focus_disband_the_ever_victorious_army
 		}
 		completion_reward = {
-			add_ideas = QNG_yong_ying
+			army_experience = 25
 		}
 	}
 
 	focus = {
-		id = QNG_focus_form_the_huai_army
-		icon = GFX_focus_QNG_huai_army
+		id = QNG_focus_chu_army
+		icon = GFX_focus_QNG_chu_army
 		relative_position_id = QNG_focus_disband_the_xiang_armies
 		x = -1
 		y = 1
@@ -916,6 +890,55 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = QNG_focus_disband_the_xiang_armies
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = QNG_focus_yong_ying_system
+		icon = GFX_Focus_Mandatory_Conscription
+		relative_position_id = QNG_focus_reshuffle_the_armies
+		x = 0
+		y = 2
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_form_the_huai_army
+		}
+		prerequisite = {
+			focus = QNG_focus_purchase_foreign_weapons
+		}
+		completion_reward = {
+			add_ideas = QNG_yong_ying
+		}
+	}
+
+	focus = {
+		id = QNG_focus_form_the_huai_army
+		icon = GFX_focus_QNG_huai_army
+		relative_position_id = QNG_focus_reshuffle_the_armies
+		x = -1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_reshuffle_the_armies
 		}
 		available = {
 			606 = {
@@ -930,9 +953,9 @@ focus_tree = {
 	focus = {
 		id = QNG_focus_reduce_green_standard_forces
 		icon = GFX_Focus_dissolve_cantonist
-		relative_position_id = QNG_focus_disband_the_xiang_armies
-		x = 1
-		y = 1
+		relative_position_id = QNG_focus_form_the_huai_army
+		x = 0
+		y = 2
 		cost = 70
 
 		ai_will_do = {
@@ -943,9 +966,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_disband_the_xiang_armies
-		}
-		prerequisite = {
+			focus = QNG_focus_disband_the_ever_victorious_army
 			focus = QNG_focus_yong_ying_system
 		}
 		completion_reward = {
@@ -1016,9 +1037,9 @@ focus_tree = {
 	focus = {
 		id = QNG_focus_train_the_shenji_ying
 		icon = GFX_Focus_Mass_Assault_Doctrine
-		relative_position_id = QNG_focus_form_the_huai_army
-		x = 1
-		y = 1
+		relative_position_id = QNG_focus_disband_the_ever_victorious_army
+		x = 0
+		y = 2
 		cost = 70
 
 		ai_will_do = {
@@ -1029,9 +1050,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_form_the_huai_army
-		}
-		prerequisite = {
+			focus = QNG_focus_disband_the_xiang_armies
 			focus = QNG_focus_reduce_green_standard_forces
 		}
 		available = {
@@ -1045,8 +1064,37 @@ focus_tree = {
 	}
 
 	focus = {
-		id = QNG_focus_merge_li_armies
-		icon = GFX_focus_QNG_merge_li
+		id = QNG_focus_reform_the_eight_banners
+		icon = GFX_Focus_eight_banners
+		relative_position_id = QNG_focus_disband_the_xiang_armies
+		x = 0
+		y = 2
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_train_the_shenji_ying
+		}
+		prerequisite = {
+			focus = QNG_focus_chu_army
+		}
+		available = {
+
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = QNG_focus_lien_chun_armies
+		icon = GFX_focus_QNG_lien_chun_armies
 		relative_position_id = QNG_focus_reduce_green_standard_forces
 		x = 1
 		y = 1
@@ -1063,15 +1111,15 @@ focus_tree = {
 			focus = QNG_focus_reduce_green_standard_forces
 		}
 		completion_reward = {
-			country_event = qing.27
+			
 		}
 	}
 
 	focus = {
-		id = QNG_focus_expand_foreign_arms_purchase
-		icon = GFX_Focus_gun_sales_FRA
-		relative_position_id = QNG_focus_reshuffle_the_armies
-		x = 3
+		id = QNG_focus_quality_over_quality
+		icon = GFX_focus_QNG_over_quality
+		relative_position_id = QNG_focus_lien_chun_armies
+		x = 1
 		y = 1
 		cost = 70
 
@@ -1083,7 +1131,125 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_reshuffle_the_armies
+			focus = QNG_focus_lien_chun_armies
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = QNG_focus_manchurian_army
+		icon = GFX_focus_QNG_manchurian_army
+		relative_position_id = QNG_focus_lien_chun_armies
+		x = -1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_lien_chun_armies
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = QNG_focus_army_budget_question
+		icon = GFX_focus_QNG_army_budget_question
+		relative_position_id = QNG_focus_manchurian_army
+		x = -1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_manchurian_army
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = QNG_focus_reorganize_manchurian_army
+		icon = GFX_focus_QNG_reorganize_manchurian_army
+		relative_position_id = QNG_focus_manchurian_army
+		x = 1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_manchurian_army
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = QNG_focus_establish_new_army
+		icon = GFX_focus_QNG_establish_new_army
+		relative_position_id = QNG_focus_manchurian_army
+		x = 0
+		y = 2
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_reorganize_manchurian_army
+		}
+		prerequisite = {
+			focus = QNG_focus_army_budget_question
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = QNG_focus_expand_foreign_arms_purchase
+		icon = GFX_Focus_gun_sales_FRA
+		relative_position_id = QNG_focus_purchase_foreign_weapons
+		x = 1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_purchase_foreign_weapons
 		}
 		completion_reward = {
 			if = {
@@ -1510,7 +1676,7 @@ focus_tree = {
 		id = QNG_focus_build_the_naval_fleet
 		icon = GFX_focus_QNG_build_fleet
 		relative_position_id = QNG_focus_self_strenthening_movement
-		x = 10
+		x = 12
 		y = 1
 		cost = 70
 
@@ -1629,6 +1795,29 @@ focus_tree = {
 	}
 
 	focus = {
+		id = QNG_focus_establish_naval_schools
+		icon = GFX_Focus_establish_naval_schools
+		relative_position_id = QNG_focus_tianjin_naval_academy
+		x = 2
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_tianjin_naval_academy
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
 		id = QNG_focus_form_the_guangdong_fleet
 		icon = GFX_focus_QNG_guandong_fleet
 		relative_position_id = QNG_focus_acquire_steamships
@@ -1724,6 +1913,29 @@ focus_tree = {
 	}
 
 	focus = {
+		id = QNG_focus_question_on_navy_spendings
+		icon = GFX_focus_QNG_navy_spendings
+		relative_position_id = QNG_focus_expand_the_nanyang_fleet
+		x = -1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_expand_the_nanyang_fleet
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
 		id = QNG_focus_form_the_beiyang_fleet
 		icon = GFX_focus_QNG_beyang_fleet
 		relative_position_id = QNG_focus_send_admirals_overseas_for_study
@@ -1770,11 +1982,60 @@ focus_tree = {
 	}
 
 	focus = {
+		id = QNG_focus_prioritize_beiyang_fleet
+		icon = GFX_focus_QNG_prioritize_beiyang_fleet
+		relative_position_id = QNG_focus_expand_the_beiyang_fleet
+		x = 1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_expand_the_beiyang_fleet
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = QNG_focus_haijun_yamen
+		icon = GFX_focus_QNG_haijun_yamen
+		relative_position_id = QNG_focus_expand_the_nanyang_fleet
+		x = 1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_expand_the_beiyang_fleet
+		}
+		prerequisite = {
+			focus = QNG_focus_expand_the_nanyang_fleet
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
 		id = QNG_focus_the_imperial_navy
 		icon = GFX_focus_QNG_imperial_navy
 		relative_position_id = QNG_focus_expand_the_nanyang_fleet
 		x = 1
-		y = 1
+		y = 2
 		cost = 70
 
 		ai_will_do = {
@@ -2219,6 +2480,160 @@ focus_tree = {
 	}
 
 	focus = {
+        id = QNG_focus_zhejiang_machinery_bureau
+		icon = GFX_Focus_zhejiang_machinery_bureau
+		relative_position_id = QNG_focus_finish_expansion_of_fuzhou_navy_shipyard
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_finish_expansion_of_fuzhou_navy_shipyard
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_xian_machinery_bureau
+		icon = GFX_Focus_xian_machinery_bureau
+		relative_position_id = QNG_focus_zhejiang_machinery_bureau
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_zhejiang_machinery_bureau
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_ta_yeh_ironmines
+		icon = GFX_Focus_Production_Iron
+		relative_position_id = QNG_focus_xian_machinery_bureau
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_xian_machinery_bureau
+		}
+		completion_reward = {
+			unlock_decision_tooltip = QNG_decision_ta_yeh_ironmines
+		}
+	}
+
+	focus = {
+        id = QNG_focus_great_hsi_ku_arsenal
+		icon = GFX_Focus_great_hsi_ku_arsenal
+		relative_position_id = QNG_focus_ta_yeh_ironmines
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_ta_yeh_ironmines
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+        id = QNG_focus_hanyang_arsenal
+		icon = GFX_Goal_military_procurement_focus
+		relative_position_id = QNG_focus_great_hsi_ku_arsenal
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_great_hsi_ku_arsenal
+		}
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				bonus = 0.10
+				uses = 3
+				category = explosives_tech
+				category = industry
+				category = mechanical_engineering_tech
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+        id = QNG_focus_hanyang_arsenal
+		icon = GFX_Goal_military_procurement_focus
+		relative_position_id = QNG_focus_great_hsi_ku_arsenal
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_great_hsi_ku_arsenal
+		}
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				bonus = 0.10
+				uses = 3
+				category = explosives_tech
+				category = industry
+				category = mechanical_engineering_tech
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
         id = QNG_focus_anqing_arsenal
 		icon = GFX_Goal_Military_Industry_Artillery
 		relative_position_id = QNG_focus_prepare_for_industralisation
@@ -2419,8 +2834,8 @@ focus_tree = {
 	}
 
 	focus = {
-        id = QNG_focus_hubei_textile_company
-		icon = GFX_Focus_Production_Fabric
+        id = QNG_focus_lanzhou_arsenal
+		icon = GFX_Focus_Weapon_Canon_7
 		relative_position_id = QNG_focus_ningbo_arsenal
 		x = 1
 		y = 1
@@ -2440,14 +2855,60 @@ focus_tree = {
 			focus = QNG_focus_jiangnan_dockyard
 		}
 		completion_reward = {
-			unlock_decision_tooltip = QNG_decision_hubei_fabric_factory
+			unlock_decision_tooltip = QNG_decision_lanzhou_arsenal
 		}
 	}
 
 	focus = {
-        id = QNG_focus_lanzhou_factory
-		icon = GFX_Focus_Weapon_Canon_7
+        id = QNG_focus_kunming_machinery_bureau
+		icon = GFX_Focus_kunming_machinery_bureau
+		relative_position_id = QNG_focus_lanzhou_arsenal
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_lanzhou_arsenal
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+        id = QNG_focus_guangzhou_machinery_bureau
+		icon = GFX_Focus_guangzhou_machinery_bureau
 		relative_position_id = QNG_focus_jingling_machine_factory
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_jingling_machine_factory
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+        id = QNG_focus_jinan_machinery_bureau
+		icon = GFX_Focus_jinan_machinery_bureau
+		relative_position_id = QNG_focus_guangzhou_machinery_bureau
 		x = -1
 		y = 1
 		cost = 70
@@ -2460,13 +2921,178 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_hubei_textile_company
+			focus = QNG_focus_guangzhou_machinery_bureau
 		}
 		prerequisite = {
-			focus = QNG_focus_jingling_machine_factory
+			focus = QNG_focus_kunming_machinery_bureau
 		}
 		completion_reward = {
-			unlock_decision_tooltip = QNG_decision_lanzhou_arsenal
+		
+		}
+	}
+
+	focus = {
+        id = QNG_focus_changsha_machinery_bureau
+		icon = GFX_Focus_changsha_machinery_bureau
+		relative_position_id = QNG_focus_jinan_machinery_bureau
+		x = -1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_jinan_machinery_bureau
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+        id = QNG_focus_liberalize_the_economy
+		icon = GFX_Focus_liberalize_the_economy
+		relative_position_id = QNG_focus_changsha_machinery_bureau
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_changsha_machinery_bureau
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+        id = QNG_focus_taiyuan_arsenal
+		icon = GFX_Focus_taiyuan_arsenal
+		relative_position_id = QNG_focus_liberalize_the_economy
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_liberalize_the_economy
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+        id = QNG_focus_chengdu_machinery_bureau
+		icon = GFX_Focus_chengdu_machinery_bureau
+		relative_position_id = QNG_focus_jinan_machinery_bureau
+		x = 1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_jinan_machinery_bureau
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+        id = QNG_focus_local_silver_coinage_minting
+		icon = GFX_Focus_local_silver_coinage_minting
+		relative_position_id = QNG_focus_chengdu_machinery_bureau
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_chengdu_machinery_bureau
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+        id = QNG_focus_kaifeng_machinery_bureau
+		icon = GFX_Focus_kaifeng_machinery_bureau
+		relative_position_id = QNG_focus_local_silver_coinage_minting
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_local_silver_coinage_minting
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+        id = QNG_focus_hubei_fabric_factory
+		icon = GFX_Focus_Production_Fabric
+		relative_position_id = QNG_focus_kaifeng_machinery_bureau
+		x = -1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_taiyuan_arsenal
+		}
+
+		prerequisite = {
+			focus = QNG_focus_kaifeng_machinery_bureau
+		}
+		completion_reward = {
+			unlock_decision_tooltip = QNG_decision_hubei_fabric_factory
 		}
 	}
 	
@@ -2546,59 +3172,9 @@ focus_tree = {
 	}
 
 	focus = {
-        id = QNG_focus_kaiping_mines
-		icon = GFX_Focus_Resource_Extraction_Mining
-		relative_position_id = QNG_focus_beiyang_machine_factory
-		x = -1
-		y = 1
-		cost = 70
-
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = QNG_focus_lanzhou_factory
-		}
-		prerequisite = {
-			focus = QNG_focus_beiyang_machine_factory
-		}
-		completion_reward = {
-			unlock_decision_tooltip = QNG_decision_kaiping_mines
-		}
-	}
-
-	focus = {
-        id = QNG_focus_keelung_coal_mine
-		icon = GFX_Focus_coal_mines
-		relative_position_id = QNG_focus_beiyang_machine_factory
-		x = 1
-		y = 1
-		cost = 70
-
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = QNG_focus_beiyang_machine_factory
-		}
-		completion_reward = {
-			unlock_decision_tooltip = QNG_decision_keelung_coal_mine
-		}
-	}
-
-
-	focus = {
         id = QNG_focus_shanghai_cotton_mill
 		icon = GFX_Focus_Resource_Cotton
-		relative_position_id = QNG_focus_lanzhou_factory
+		relative_position_id = QNG_focus_beiyang_machine_factory
 		x = 0
 		y = 1
 		cost = 70
@@ -2611,45 +3187,18 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_lanzhou_factory
+			focus = QNG_focus_beiyang_machine_factory
 		}
 		completion_reward = {
 			unlock_decision_tooltip = QNG_decision_shanghai_cotton_mill
 		}
 	}
 
-
 	focus = {
-        id = QNG_focus_mo_ho_gold_mining_company
-		icon = GFX_Focus_Resource_Gold_2
-		relative_position_id = QNG_focus_keelung_coal_mine
-		x = -1
-		y = 1
-		cost = 70
-
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		prerequisite = {
-			focus = QNG_focus_kaiping_mines
-		}
-		prerequisite = {
-			focus = QNG_focus_keelung_coal_mine
-		}
-		completion_reward = {
-			country_event = qing.506
-		}
-	}
-
-	focus = {
-        id = QNG_focus_hanyang_ironworks
-		icon = GFX_Focus_Production_Iron
-		relative_position_id = QNG_focus_kaiping_mines
-		x = -2
+        id = QNG_focus_keelung_coal_mine
+		icon = GFX_Focus_coal_mines
+		relative_position_id = QNG_focus_shanghai_cotton_mill
+		x = 0
 		y = 1
 		cost = 70
 
@@ -2663,8 +3212,147 @@ focus_tree = {
 		prerequisite = {
 			focus = QNG_focus_shanghai_cotton_mill
 		}
+		completion_reward = {
+			unlock_decision_tooltip = QNG_decision_keelung_coal_mine
+		}
+	}
+
+	focus = {
+        id = QNG_focus_subsidize_light_industry
+		icon = GFX_Focus_subsidize_light_industry
+		relative_position_id = QNG_focus_keelung_coal_mine
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_keelung_coal_mine
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+        id = QNG_focus_kaiping_railway
+		icon = GFX_Focus_kaiping_railway
+		relative_position_id = QNG_focus_subsidize_light_industry
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_subsidize_light_industry
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+        id = QNG_focus_kaiping_mines
+		icon = GFX_Focus_Resource_Extraction_Mining
+		relative_position_id = QNG_focus_kaiping_railway
+		x = -1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_kaiping_railway
+		}
+		completion_reward = {
+			unlock_decision_tooltip = QNG_decision_kaiping_mines
+		}
+	}
+
+	focus = {
+        id = QNG_focus_tianjin_yu_railway
+		icon = GFX_Focus_tianjin_yu_railway
+		relative_position_id = QNG_focus_kaiping_railway
+		x = 1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_kaiping_railway
+		}
+		completion_reward = {
+			
+		}
+	}
+
+
+	focus = {
+        id = QNG_focus_mo_ho_gold_mining_company
+		icon = GFX_Focus_Resource_Gold_2
+		relative_position_id = QNG_focus_kaiping_mines
+		x = 1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		prerequisite = {
 			focus = QNG_focus_kaiping_mines
+		}
+		prerequisite = {
+			focus = QNG_focus_tianjin_yu_railway
+		}
+		completion_reward = {
+			country_event = qing.506
+		}
+	}
+
+	focus = {
+        id = QNG_focus_hanyang_ironworks
+		icon = GFX_Focus_Production_Iron
+		relative_position_id = QNG_focus_ping_hsiang_coal_mines
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_ping_hsiang_coal_mines
 		}
 		completion_reward = {
 			unlock_decision_tooltip = QNG_decision_hanyang_ironworks
@@ -2674,7 +3362,216 @@ focus_tree = {
 	focus = {
         id = QNG_focus_guizhou_ironworks
 		icon = GFX_Focus_Production_Iron
-		relative_position_id = QNG_focus_hanyang_ironworks
+		relative_position_id = QNG_focus_mo_ho_gold_mining_company
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_mo_ho_gold_mining_company
+		}
+		completion_reward = {
+			unlock_decision_tooltip = QNG_decision_guizhou_ironworks
+		}
+	}
+
+	focus = {
+        id = QNG_focus_ping_hsiang_coal_mines
+		icon = GFX_Focus_coal_mines
+		relative_position_id = QNG_focus_hubei_fabric_factory
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_hubei_fabric_factory
+		}
+		completion_reward = {
+			unlock_decision_tooltip = QNG_decision_ping_hsiang_coal_mines
+		}
+	}
+
+	focus = {
+        id = QNG_focus_progress_towards_industrializing
+		icon = GFX_Focus_military_procurement_focus
+		relative_position_id = QNG_focus_hanyang_arsenal
+		x = 4
+		y = 2
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_hanyang_arsenal
+		}
+		prerequisite = {
+			focus = QNG_focus_hanyang_ironworks
+		}
+		prerequisite = {
+			focus = QNG_focus_guizhou_ironworks
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_diplomacy_of_the_qing
+		icon = GFX_Focus_diplomacy_of_the_qing
+		x = 42
+		y = 7
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_enforce_the_tributary_system
+		icon = GFX_Focus_enforce_the_tributary_system
+		relative_position_id = QNG_focus_diplomacy_of_the_qing
+		x = -6
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_diplomacy_of_the_qing
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_imperial_chinese_mision_to_ryukyu
+		icon = GFX_Focus_imperial_chinese_mision_to_ryukyu
+		relative_position_id = QNG_focus_diplomacy_of_the_qing
+		x = -4
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_diplomacy_of_the_qing
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_influence_the_ryukyu_islands
+		icon = GFX_Focus_influence_the_ryukyu_islands
+		relative_position_id = QNG_focus_imperial_chinese_mision_to_ryukyu
+		x = 0
+		y = 2
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_imperial_chinese_mision_to_ryukyu
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_chinese_diplomatic_mission_to_spain
+		icon = GFX_Focus_chinese_diplomatic_mission_to_spain
+		relative_position_id = QNG_focus_diplomacy_of_the_qing
+		x = -2
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_diplomacy_of_the_qing
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_chinese_diplomatic_mission_to_us
+		icon = GFX_Focus_chinese_diplomatic_mission_to_us
+		relative_position_id = QNG_focus_diplomacy_of_the_qing
+		x = 0
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_diplomacy_of_the_qing
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_chinese_diplomatic_mission_to_uk
+		icon = GFX_Focus_chinese_diplomatic_mission_to_uk
+		relative_position_id = QNG_focus_diplomacy_of_the_qing
 		x = 2
 		y = 1
 		cost = 70
@@ -2687,20 +3584,40 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_hanyang_ironworks
-		}
-		prerequisite = {
-			focus = QNG_focus_mo_ho_gold_mining_company
+			focus = QNG_focus_diplomacy_of_the_qing
 		}
 		completion_reward = {
-			unlock_decision_tooltip = QNG_decision_guizhou_ironworks
+
 		}
 	}
 
 	focus = {
-        id = QNG_focus_ta_yeh_ironmines
-		icon = GFX_Focus_Production_Iron
-		relative_position_id = QNG_focus_shanghai_cotton_mill
+        id = QNG_focus_sino_british_burma_clause
+		icon = GFX_Focus_sino_british_burma_clause
+		relative_position_id = QNG_focus_chinese_diplomatic_mission_to_uk
+		x = 0
+		y = 2
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_chinese_diplomatic_mission_to_uk
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_chinese_diplomatic_mission_to_japan
+		icon = GFX_Focus_chinese_diplomatic_mission_to_japan
+		relative_position_id = QNG_focus_chinese_diplomatic_mission_to_spain
 		x = -1
 		y = 1
 		cost = 70
@@ -2713,21 +3630,44 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_expansion_of_the_jiangnan_dockyard
+			focus = QNG_focus_chinese_diplomatic_mission_to_spain
 		}
 		prerequisite = {
-			focus = QNG_focus_shanghai_cotton_mill
+			focus = QNG_focus_imperial_chinese_mision_to_ryukyu
 		}
 		completion_reward = {
-			unlock_decision_tooltip = QNG_decision_ta_yeh_ironmines
+
 		}
 	}
 
 	focus = {
-        id = QNG_focus_hanyang_arsenal
-		icon = GFX_Goal_military_procurement_focus
-		relative_position_id = QNG_focus_ta_yeh_ironmines
-		x = -2
+        id = QNG_focus_sino_japanese_tianjin_conference
+		icon = GFX_Focus_sino_japanese_tianjin_conference
+		relative_position_id = QNG_focus_chinese_diplomatic_mission_to_japan
+		x = 0
+		y = 2
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_chinese_diplomatic_mission_to_japan
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_chinese_diplomatic_mission_to_germany
+		icon = GFX_Focus_chinese_diplomatic_mission_to_germany
+		relative_position_id = QNG_focus_chinese_diplomatic_mission_to_spain
+		x = 1
 		y = 1
 		cost = 70
 
@@ -2739,28 +3679,69 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_ta_yeh_ironmines
+			focus = QNG_focus_chinese_diplomatic_mission_to_spain
 		}
 		prerequisite = {
-			focus = QNG_focus_finish_expansion_of_fuzhou_navy_shipyard
+			focus = QNG_focus_chinese_diplomatic_mission_to_us
 		}
 		completion_reward = {
-			army_experience = 50
-			add_tech_bonus = {
-				bonus = 0.10
-				uses = 3
-				category = explosives_tech
-				category = industry
-				category = mechanical_engineering_tech
-				category = support_tech
-			}
+
 		}
 	}
 
 	focus = {
-        id = QNG_focus_ping_hsiang_coal_mines
-		icon = GFX_Focus_coal_mines
-		relative_position_id = QNG_focus_hanyang_ironworks
+        id = QNG_focus_chinese_diplomatic_mission_to_france
+		icon = GFX_Focus_chinese_diplomatic_mission_to_france
+		relative_position_id = QNG_focus_chinese_diplomatic_mission_to_us
+		x = 1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_chinese_diplomatic_mission_to_uk
+		}
+		prerequisite = {
+			focus = QNG_focus_chinese_diplomatic_mission_to_us
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_ceasefire_with_france
+		icon = GFX_Focus_ceasefire_with_france
+		relative_position_id = QNG_focus_chinese_diplomatic_mission_to_france
+		x = 0
+		y = 2
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_chinese_diplomatic_mission_to_france
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_chinese_diplomatic_mission_to_russia
+		icon = GFX_Focus_chinese_diplomatic_mission_to_russia
+		relative_position_id = QNG_focus_chinese_diplomatic_mission_to_germany
 		x = -1
 		y = 1
 		cost = 70
@@ -2773,13 +3754,132 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = QNG_focus_ta_yeh_ironmines
+			focus = QNG_focus_chinese_diplomatic_mission_to_japan
 		}
 		prerequisite = {
-			focus = QNG_focus_hanyang_ironworks
+			focus = QNG_focus_chinese_diplomatic_mission_to_germany
 		}
 		completion_reward = {
-			unlock_decision_tooltip = QNG_decision_ping_hsiang_coal_mines
+
 		}
 	}
+
+	focus = {
+        id = QNG_focus_chinese_diplomatic_mission_to_austria_hungary
+		icon = GFX_Focus_chinese_diplomatic_mission_to_austria_hungary
+		relative_position_id = QNG_focus_chinese_diplomatic_mission_to_france
+		x = -1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_chinese_diplomatic_mission_to_france
+		}
+		prerequisite = {
+			focus = QNG_focus_chinese_diplomatic_mission_to_germany
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_repeal_burmese_titles_for_jiangxinpo
+		icon = GFX_Focus_repeal_burmese_titles_for_jiangxinpo
+		relative_position_id = QNG_focus_diplomacy_of_the_qing
+		x = 4
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_diplomacy_of_the_qing
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_chinese_korean_treaty
+		icon = GFX_Focus_chinese_korean_treaty
+		relative_position_id = QNG_focus_diplomacy_of_the_qing
+		x = 6
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_diplomacy_of_the_qing
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_chinese_concession_of_incheon
+		icon = GFX_Focus_chinese_concession_of_incheon
+		relative_position_id = QNG_focus_chinese_korean_treaty
+		x = -1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_chinese_korean_treaty
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+        id = QNG_focus_military_assistance_to_korea
+		icon = GFX_Focus_military_assistance_to_korea
+		relative_position_id = QNG_focus_chinese_korean_treaty
+		x = 1
+		y = 1
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = {
+			focus = QNG_focus_chinese_korean_treaty
+		}
+		completion_reward = {
+
+		}
+	}
+
 }
